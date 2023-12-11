@@ -275,7 +275,7 @@ li a:hover {
 
 @media screen and (max-width: 768px) {
     .detail .socialum {
-        display: grid;
+        display: flex;
         grid-template-columns: auto max-content;
         gap: 10px; 
         align-items: center;
