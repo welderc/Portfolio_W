@@ -52,6 +52,15 @@
                     <a href="https://github.com/elderScrols" target="_blank" style="--socialAni:3"><i class='bx bxl-github'></i></a>
                     <a href="https://www.facebook.com/profile.php?id=100014268826322" target="_blank" style="--socialAni:4"><i class='bx bxl-facebook-circle'></i></a>
                 </div>
+                <div class="curriculo">
+                    <h2 class="curriculo_titulo">Curriculo</h2>
+                    <div class="button">
+                        <div class="content">
+                            <po class="bx bx-cloud-download"></po>
+                            <span class="button-text">Download</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="img-sec">
                 <div class="images">
@@ -187,6 +196,25 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
+        let button = document.querySelector(".button");
+        button.addEventListener("click" , ()=>{
+            button.classList.add("active");
+            
+            setTimeout(()=>{
+                button.classList.remove("active");
+                document.querySelector("po").classList.replace("bx-cloud-download", "bx-check-circle")
+                const link = document.createElement('a');
+                link.href = './Curriculo/Curriculo Welder Claudio.pdf'; // Substitua 'URL_DO_SEU_ARQUIVO.PDF' pela URL real do seu arquivo PDF
+                link.download = 'Curriculo Welder Claudio.pdf'; // Substitua 'nome_do_arquivo.pdf' pelo nome desejado do arquivo
+
+                // Disparando o clique no link para iniciar o download
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);    
+                document.querySelector(".button-text").innerText = "Completado"
+
+            }, 6000) //1s = 1000ms
+        })
     </script>
     
 </body>
