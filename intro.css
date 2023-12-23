@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400&display=swap');
-
+/* Variáveis primárias */
 :root {
     --primary-color: #808080;
     --primary-dark: #1F252E;
 }
+/* Variáveis Logo */
+:root {
+    --cor-primaria: #6A5ACD;
+    --cor-secundaria: #EE6B4D;
+    --cor-cinza-claro: #353535;
+    --cor-branca: #fff;
+    --cor-fundo-escuro: #150E24;
+    --cor-fundo-cinza-escuro: #0E0E1F;
+    --cor-fundo-cinza-claro: #353535;
+  }
 
 * {
     margin: 0;
@@ -39,7 +49,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1em;
     padding: 1rem 0;
+
 }
 .logo {
     font-size: 1.5rem;
@@ -82,6 +94,27 @@ li a:hover {
 }
 .menu {
     display: none;
+}
+
+/* Nav Logo */
+.logo a {
+    background: linear-gradient(45deg, #F5F5F5, #EE6B4D, #F5F5F5);
+    background-size: 400%, 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: degrade 10s linear infinite alternate;
+}
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+
 }
 /* Nav End */
 
@@ -159,17 +192,6 @@ li a:hover {
 }
 
 .images::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 130px);
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    border-radius: 6px;
-}
-
-.images::before {
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
 }
@@ -228,6 +250,20 @@ li a:hover {
 
 
 /* Curriculo */
+.curriculo {
+    text-align: center;
+    margin-top: 10em;
+}
+.row_c {
+    display: grid;
+    grid-template-columns: auto 10em auto;
+    justify-content: center;
+    
+}
+.row_c p {
+    font-size: 2.5em;
+    transform: translateY(2em);
+}
 .button{
     margin-top: 1em;
     position: relative;
@@ -239,7 +275,25 @@ li a:hover {
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     cursor: pointer;
     overflow: hidden;
+
+    background: linear-gradient(45deg, #F5F5F5, #EE6B4D, #F5F5F5);
+    background-size: 400%, 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: degrade 15s linear infinite alternate;
 }
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
 .button.active {
     height: 20px;
     width: 200px;
@@ -280,6 +334,13 @@ li a:hover {
     font-size: 18PX;
     margin-left: 8PX;
 }
+.button .content a {
+    font-size: 2em;
+}
+.button .content po {
+    font-size: 1.7em;
+}
+
 
 
 /* Sobre */
@@ -352,9 +413,13 @@ li a:hover {
     width: 1em;
     height: 1em;
 }
+.projetos i {
+    padding-right: 4px;
+}
 .projetos a {
     text-decoration: none;
     color: inherit;
+    padding-right: 2em;
 }
 
 /* Contatos */
