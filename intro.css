@@ -341,7 +341,19 @@ li a:hover {
     font-size: 1.7em;
 }
 
-
+/* para pc */
+@media screen and (max-width: 1310px) {
+    .projetos {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .row_c {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /* Sobre */
 /* Habilidades */
@@ -406,6 +418,7 @@ li a:hover {
 
 /* Projetos */
 .projetos {
+    display: grid;
     margin-top: 2em;
 
 }
@@ -428,14 +441,16 @@ li a:hover {
     color: inherit;
 }
 .contatos {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center; 
     margin-left: 2em;
     margin-bottom: 1em;
 }
 .footer_social_media {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 15em 14em 12em 15em;
+    align-items: center;
 }
 .footer_contacts {
     margin-bottom: 1em;
@@ -452,7 +467,7 @@ li a:hover {
     margin-bottom: 1em;
 }
 /* para pc Contatos */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 983px) {
     .footer_social_media {
         display: grid;
         grid-template-columns: repeat(1, 1fr); /* Cria três colunas de largura igual */
