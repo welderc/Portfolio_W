@@ -441,9 +441,10 @@ li a:hover {
     color: inherit;
 }
 .contatos {
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    text-align: center;  
     margin-left: 2em;
     margin-bottom: 1em;
 }
@@ -451,6 +452,8 @@ li a:hover {
     display: grid;
     grid-template-columns: 15em 14em 12em 15em;
     align-items: center;
+    justify-content: center;
+    text-align: center;    
 }
 .footer_contacts {
     margin-bottom: 1em;
