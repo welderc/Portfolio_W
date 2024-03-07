@@ -26,6 +26,13 @@ body {
     font-family: 'Outfit', sans-serif;
 
 }
+video {
+    width: 800px; /* ou qualquer largura desejada */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
 /* Genral */
 .container {
     padding: 0 8.4rem;
@@ -341,6 +348,12 @@ li a:hover {
     font-size: 1.7em;
 }
 
+/* tag link prokjetos */
+.projetos__link {
+    display: flex;
+    justify-content: space-evenly;
+} 
+
 /* para pc */
 @media screen and (max-width: 1310px) {
     .projetos {
@@ -348,6 +361,7 @@ li a:hover {
         justify-content: center;
         align-items: center;
     }
+
     .row_c {
         display: flex;
         flex-direction: column;
